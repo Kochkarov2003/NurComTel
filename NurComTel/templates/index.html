@@ -1,0 +1,621 @@
+{% load static %}
+<!doctype html>
+<!--
+	Solution by GetTemplates.co
+	URL: https://gettemplates.co
+-->
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- awesone fonts css-->
+    <link href="{% static 'css/font-awesome.css'%}" rel="stylesheet" type="text/css">
+    <!-- owl carousel css-->
+    <link rel="stylesheet" href="{% static 'owl-carousel/assets/owl.carousel.min.css'%}" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <title>NurComTell</title>
+    <style>
+         html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
+    <div class="container"><a class="navbar-brand"><img src="{% static 'images/nurlog.png' %}" alt="" width="180px"></a>
+        <button class="navbar-toggler" data-target="#my-nav" onclick="myFunction(this)" data-toggle="collapse"><span
+                class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span></button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#company">Компания</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">Решения</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+            </ul>
+           
+        </div>
+    </div>
+</nav>
+<div class="container-fluid gtco-banner-area delete_margin">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="create" style="font-weight: 700;">Создание сайтов для бизнеса
+                </h1>
+                <p> Сайты ваши мечты </p>
+                <a href="{% url 'add_post' %}">Оставить заявку <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+                <br><br>
+            <div class="col-md-6">
+
+                <img  class="foto" src="{% static 'images/nur.jpg'%}" alt="">
+                <div class="card card_display">
+                   
+                    <svg class="back-bg" width="100%" viewBox="0 0 900 700" style="position:absolute; z-index: -1">
+                        <defs>
+                            <linearGradient id="PSgrad_01" x1="64.279%" x2="0%" y1="76.604%" y2="0%">
+                                <stop offset="0%" stop-color="rgb(1,230,248)" stop-opacity="1"></stop>
+                                <stop offset="100%" stop-color="rgb(29,62,222)" stop-opacity="1"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path fill-rule="evenodd" opacity="0.102" fill="url(#PSgrad_01)" d="M616.656,2.494 L89.351,98.948 C19.867,111.658 -16.508,176.639 7.408,240.130 L122.755,546.348 C141.761,596.806 203.597,623.407 259.843,609.597 L697.535,502.126 C748.221,489.680 783.967,441.432 777.751,392.742 L739.837,95.775 C732.096,35.145 677.715,-8.675 616.656,2.494 Z"></path>
+                    </svg>
+                    <!-- *************-->
+                   
+                    <svg width="100%" viewBox="0 0 700 500">
+                        <clipPath id="clip-path">
+                            <path d="M89.479,0.180 L512.635,25.932 C568.395,29.326 603.115,76.927 590.357,129.078 L528.827,380.603 C518.688,422.048 472.661,448.814 427.190,443.300 L73.350,400.391 C32.374,395.422 -0.267,360.907 -0.002,322.064 L1.609,85.154 C1.938,36.786 40.481,-2.801 89.479,0.180 Z"></path>
+                        </clipPath>
+                        <!-- xlink:href for modern browsers, src for IE8- -->
+                        <image clip-path="url(#clip-path)" xlink:href="{% static 'images/nur.webp'%}" height="465" class="svg__image"></image>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid gtco-feature marginbut" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 ">
+                <img  class="foto" src="{% static 'images/nur.jpg'%}" alt="">
+                <div class="cover">
+                    <div class="card ">
+                        <svg
+                                class="back-bg"
+                                width="100%" viewBox="0 0 900 700" style="position:absolute; z-index: -1">
+                            <defs>
+                                <linearGradient id="PSgrad_01" x1="64.279%" x2="0%" y1="76.604%" y2="0%">
+                                    <stop offset="0%" stop-color="rgb(1,230,248)" stop-opacity="1"/>
+                                    <stop offset="100%" stop-color="rgb(29,62,222)" stop-opacity="1"/>
+                                </linearGradient>
+                            </defs>
+                            <path fill-rule="evenodd" opacity="0.102" fill="url(#PSgrad_01)"
+                                  d="M616.656,2.494 L89.351,98.948 C19.867,111.658 -16.508,176.639 7.408,240.130 L122.755,546.348 C141.761,596.806 203.597,623.407 259.843,609.597 L697.535,502.126 C748.221,489.680 783.967,441.432 777.751,392.742 L739.837,95.775 C732.096,35.145 677.715,-8.675 616.656,2.494 Z"/>
+                        </svg>
+                        <!-- *************-->
+
+                        <svg width="100%" viewBox="0 0 700 500">
+                            <clipPath id="clip-path">
+                                <path d="M89.479,0.180 L512.635,25.932 C568.395,29.326 603.115,76.927 590.357,129.078 L528.827,380.603 C518.688,422.048 472.661,448.814 427.190,443.300 L73.350,400.391 C32.374,395.422 -0.267,360.907 -0.002,322.064 L1.609,85.154 C1.938,36.786 40.481,-2.801 89.479,0.180 Z"></path>
+                            </clipPath>
+                            <!-- xlink:href for modern browsers, src for IE8- -->
+                            <image clip-path="url(#clip-path)" xlink:href="{% static 'images/comanda1.jpg'%}" 
+                                   height="510px" class="svg__image"></image>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5" id="company">
+                <h2 align ="center"><img class="nurlog" src="{% static 'images/nurlog.png'%}" alt="" width="280px"> </h2>
+                <p>Компания «Nur-Com-Tel»является молодой и быстро развивающейся компанией, основанной в 2015 году и состоящей из команды профессионалов. За годы своей активной деятельности, компания «Nur-Com-Tel» стала ведущей казахстанской компанией разработчиков в области WEB и программного обеспечения, сервисного обслуживания и в поставке оборудования, а также реализовала множество проектов различного направления.
+
+                </p>
+                <p>
+                    <small>
+                    </small>
+                </p>
+                <a href="#">Подробнее<i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid gtco-features" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h2> Услуги Nurcomtel компании<span style="color: #666666; font-size:18px ;">
+                   <br/> / Nurcomtel Company Services</span></h2>
+                <p> Explore The Services <br/>
+                    We Offer For You</p>
+                <a href="#">Все сервисы
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+                <!-- <div id="sidebar">
+                    <div class="toggle-btn">
+                        Learn More
+                    </div>
+                    <ul>
+                        <li>Услуги Nurcomtel компании</li>
+                        <li>программное обеспечение</li>
+                        <li>разработка сайтов</li>
+                        <li>контент-поддержка</li>
+                        <li>поставка программного обеспечения и оборудования</li>
+                        <li>сервисное обслуживание</li>
+                        <li>опытно-конструкторские работы</li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="col-lg-8">
+                <svg id="bg-services"
+                     width="100%"
+                     viewBox="0 0 1000 800">
+                    <defs>
+                        <linearGradient id="PSgrad_02" x1="64.279%" x2="0%" y1="76.604%" y2="0%">
+                            <stop offset="0%" stop-color="rgb(1,230,248)" stop-opacity="1"/>
+                            <stop offset="100%" stop-color="rgb(29,62,222)" stop-opacity="1"/>
+                        </linearGradient>
+                    </defs>
+                    <path fill-rule="evenodd" opacity="0.102" fill="url(#PSgrad_02)"
+                          d="M801.878,3.146 L116.381,128.537 C26.052,145.060 -21.235,229.535 9.856,312.073 L159.806,710.157 C184.515,775.753 264.901,810.334 338.020,792.380 L907.021,652.668 C972.912,636.489 1019.383,573.766 1011.301,510.470 L962.013,124.412 C951.950,45.594 881.254,-11.373 801.878,3.146 Z"/>
+                </svg>
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-center">
+                            <div class="oval"><img class="card-img-top" src="{% static 'images/web-design.png'%}" alt=""></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Web Design <br/><span style="font-size: 15px; color: #666666;">/ Веп дизайн</span></h3>
+                                <p class="card-text">Мы разрабатываем программные продукты под нужды наших клиентов и ...</p>
+                            </div>
+                        </div>
+                        <div class="card text-center">
+                            <div class="oval"><img class="card-img-top" src="{% static 'images/marketing.png'%}" alt=""></div>
+                            <div class="card-body">
+                                <h3 class="card-title">3D desigen <br/>  <span style="font-size: 15px; color: #666666; ">/ 3D дизайн</span></h3>
+                                <p class="card-text">Компания Nurcomtel занимается профессиональным оказанием услуг по
+                                     созданию трехмерных моделей любых предметов</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center">
+                            <div class="oval"><img class="card-img-top" src="{% static 'images/seo.png'%}" alt=""></div>
+                            <div class="card-body">
+                                <h3 class="card-title">SEO <br/><span style="color: #666666; font-size: 15px;">/ Oптимизация поисковых систем</span></h3>
+                                <p class="card-text">Оперативно разместим информацию в 
+                                    соответствующие разделы вашего сайта.</p>
+                            </div>
+                        </div>
+                        <div class="card text-center">
+                            <div class="oval"><img class="card-img-top" src="{% static 'images/graphics-design.png'%}" alt=""></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Exclusive website development<br/> <span style="color: #666666; font-size: 15px;">/ Разработка эксклюзивного сайта</span></h3>
+                                <p class="card-text">Мы можем предложить принципиально иной подход, детально проработаем дизайн и функционал сайта.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid gtco-numbers-block">
+    <div class="container baground-c">
+      
+        <div class="row">
+            <div class="col-3">
+                <div class="card"><a href="#projects" class="project">
+                    <div class="card-body">
+                        <h5 class="card-title">25</h5>
+                        <p class="card-text">Active Projects</p>
+                        <span style="color: #242323; font-size: 16px;">Активные Проекты</span>
+                    </div>
+                </a></div>
+            </div>
+            <div class="col-3">
+                <div class="card"> <a class="project" href="#projects">
+                    <div class="card-body">
+                        <h5 class="card-title">20</h5>
+                        <p class="card-text">Business Growth</p>
+                        <span style="color: #242323; font-size: 16px;">Рост бизнеса</span>
+                    </div>
+                </a></div>
+            </div>
+            <div class="col-3">
+                <div class="card"><a class="project" href="#projects">
+                    <div class="card-body">
+                        <h5 class="card-title">25</h5>
+                        <p class="card-text">Completed Projects</p>
+                        <span style="color: #242323;font-size: 16px;">Завершенные Проекты</span>
+                    </div>
+                </a></div>
+            </div>
+            <div class="col-3">
+                <div class="card"><a class="project" href="#projects">
+                    <div class="card-body">
+                        <h5 class="card-title">25</h5>
+                        <p class="card-text">Happy Clients</p>
+                        <span style="color: #242323; font-size: 16px;">Счастливые Клиенты</span>
+                    </div>
+                </a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="container-fluid gtco-testimonials">
+    <div class="container">
+        <h2>Our Team Authorth NurComTell</h2>
+        <div class="owl-carousel owl-carousel1 owl-theme">
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="images/nurlibek.jpg" alt="">
+                    <div class="card-body">
+                        <h5>Jumataev Nurlibek <br/>
+                            <span> Project Manager </span></h5>
+                        <p class="card-text">@ Nurcomtel </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="images/ergali.jpg" alt="">
+                    <div class="card-body">
+                        <h5>Arin Yergali<br/>
+                            <span> Web programmer </span></h5>
+                        <p class="card-text">@ Nurcomtel </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="images/nurbek.jpg" alt="">
+                    <div class="card-body">
+                        <h5>Omar Nurbek<br/>
+                            <span>STEAM developer </span></h5>
+                        <p class="card-text">@ Nurcomtel </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="images/diyar.jpg" alt="">
+                    <div class="card-body">
+                        <h5>Shavkatov Diyar<br/>
+                            <span> Web programmer </span></h5>
+                        <p class="card-text">@ Nurcomtel </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="images/baha.jpg" alt="">
+                    <div class="card-body">
+                        <h5>Bolat Bagdaulet<br/>
+                            <span> Web programmer </span></h5>
+                        <p class="card-text">@ Nurcomtel</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="images/ernazar.jpeg" alt="">
+                    <div class="card-body">
+                        <h5>Baydildaev Ernazar<br/>
+                            <span> Designer</span></h5>
+                        <p class="card-text">@ Nurcomtel</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+            <div class="card text-center"><img class="card-img-top" src="images/shuhrat.jpg" alt="">
+                    <div class="card-body">
+                        <h5>Kochkarov Shukhrat <br/>
+                            <span> Web programmer</span></h5>
+                        <p class="card-text">@ Nurcomtel</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="images/asad.jpg" alt="">
+                    <div class="card-body">
+                        <h5>Ahmadjanov Asadbek<br/>
+                            <span> Web programmer </span></h5>
+                        <p class="card-text">@ Nurcomtel</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="images/muhammed.jpg" alt="">
+                    <div class="card-body">
+                        <h5>Ali Muhammedali<br/>
+                            <span> Video Maker </span></h5>
+                        <p class="card-text">@ Nurcomtel</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="images/Asem.jpg" alt="">
+                    <div class="card-body">
+                        <h5>Ermekbay Asem<br/>
+                            <span> Web programmer</span></h5>
+                        <p class="card-text">@ Nurcomtel</p>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>-->
+
+<!-- section_slider -->
+
+<!-- <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        {% for people in peoples%}
+      
+        <img src="{{people.img.url}}" alt="">
+          <a href="f/{{ people.id }}">
+        <h1 class="cardheading">{{people.title}}</h1>
+        <span> Project Manager </span>
+        <p class="card-text">@ Nurcomtel</p>
+        </a>
+        {% endfor %}
+      </div>
+     </div>
+    <div class="swiper-pagination"></div>
+  </div> -->
+
+
+
+<div class="section_slider">
+    <section class="slider">
+        <p class="sliderHeading " style="font-size: 22px;">Наши сатрудники</p>
+       
+        <div class="slider-card-container">
+
+    
+
+            <!-- <img src="images/nurlibek.jpg" alt=""> -->
+            {% for people in peoples%}
+            <div class="slider-card">
+            <a href="f/{{ people.id }}">
+            <img src="{{people.img.url}}" alt="">
+            <h1 class="cardheading">{{people.title}} </h1>
+            <span> Project Manager </span>
+            <p class="card-text">@ Nurcomtel</p>
+            </a>
+        </div>
+            {% endfor %}
+      
+           <!-- Слайдер -->
+       
+
+        
+        </div>
+    </section>
+</div>
+<!-- end section_slider -->
+
+<div class="container-fluid gtco-features-list">
+    <div class="container">
+        <div class="contents">
+            <h4>Наши работы</h4>
+            <span>"Nur-Com-Tel" компаниясы келесі жобаларды әзірлеп, іске асырды:</span>
+        </div>
+        <div class="row" id="projects">
+
+        {% for main in project %}
+            <div class="media col-md-6 col-lg-4">
+                <div class="oval mr-4"><img class="align-self-start" src="{{main.imgs.url}}" alt=""></div>
+                <div class="media-body">
+                    <a href="http://shymkent-baspana.kz/kz/">
+                        <h5 class="mb-0">{{main.title}}</h5>
+                       {{main.body}}<a href="http://shymkent-baspana.kz/kz/
+                        ">
+                    </a>
+                    </a>
+                </div>
+            </div>
+            <p>{{main.img.url}}</p>
+          {% endfor %}
+
+          
+
+        </div>
+
+    </div>  
+</div>
+
+<div class="container-fluid gtco-news" id="news">
+    <div class="container">
+        <h4 align="center">Наши решения <br/> <span style="color: #666666; font-size:18px; ">Our solutions</span></h4>
+        <div class="owl-carousel owl-carousel2 owl-theme">
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="{% static 'images/news1.jpg'%}" alt="">
+                    <div class="card-body text-left pr-0 pl-0">
+                        <h5>Школа программирования <span style="color: #666666; font-size:16px; "> <br/>/  Programming School</span></h5>
+                        <p class="card-text">Обучение программированию, разработке веб сайтов и многому другому. Мы разрабатываем программные продукты под нужды наших клиентов.</p>
+                        <a href="#">Подробнее <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="{% static 'images/news2.jpg'%}" alt="">
+                    <div class="card-body text-left pr-0 pl-0">
+                        <h5> Создание сайтов и 
+                            разработка дизайнов <span style="font-size: 16px;color: #666666; ">/ Website creation and development of bitcoin</span></h5>
+                        <p class="card-text">Качественный и современный сайт, выполненный профессиональными дизайнерами и программистами в соответствии со всеми стандартами.</p>
+                        <a href="#">Подробнее <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card text-center"><img class="card-img-top" src="{% static 'images/news3.jpg'%}" alt="">
+                    <div class="card-body text-left pr-0 pl-0">
+                        <h5>Создание мобильных приложений<span style="color: #666666; font-size: 16px; ">/ Creating mobile apps</span> </h5>
+                        <p class="card-text">Мы знаем, как автоматизировать бизнес-процессы эффективно. Занимаемся разработкой мобильных приложений для владельцев частного бизнеса и многому другому.</p>
+                        <a href="#">Подробнее <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container margintop">
+    <h3 align = "center"> В данный момент компания «Nur-Com-Tel» работает над проектами:
+    </h3>
+<ol class="rounded">
+    <li><a href="#">Автоматизированная платформа инженерной геокарты для местных исполнительных органов</a></li>
+    <li><a href="#">Приложение виртуальный  3D тур по достопримечательностям города 
+    </a></li>
+    <li><a href="#">Программный комплекс умных пешеходных переходов
+
+    </a></li>
+        <li><a href="#">Умный пешеход</a></li>
+        <li><a href="#">Онлайн-регистрация</a></li>
+        <li><a href="#">Электронный документооборот</a></li>  
+        <li><a href="#">Виртуальные тренажеры (лаборатории)</a></li>
+        <li><a href="#">Разработка платформы «Массовый открытый онлайн-курс»</a></li>
+        <li><a href="#">Внедрение умных технологий</a></li>
+        <li><a href="#">ПО для СКУД системы</a></li>
+        <li><a href="#">Обучение по WEB программировнию</a></li> 
+        <li><a href="#">Обучение по робототехнике</a></li> 
+  </ol>
+</div>
+<br/>
+
+<!-- section -->
+<div class="register">
+    <iframe width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1770.5366437502707!2d69.61396939363196!3d42.33938605910341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a91d5e0e88f6c3%3A0xf96f9a659ebcc8d6!2z0YPQu9C40YbQsCDQlNC40LLQsNC10LLQsCAxMjksINCo0YvQvNC60LXQvdGC!5e0!3m2!1sru!2skz!4v1645811219616!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<!-- section end-->
+<footer class="container-fluid" id="gtco-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6" id="contact">
+               
+
+                <h4 class="mt-5">Fllow Us</h4>
+                <ul class="nav follow-us-nav">
+                    <li class="nav-item"><a class="nav-link pl-0" href="#"><i class="fa fa-facebook"
+                                                                              aria-hidden="true"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-twitter"
+                                                                         aria-hidden="true"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-google"
+                                                                         aria-hidden="true"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-linkedin"
+                                                                         aria-hidden="true"></i></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://instagram.com/nurcomtel_company?utm_medium=copy_link"><i class="fa fa-instagram"
+                                                                         aria-hidden="true"></i></a></li>
+                </ul>
+
+                <h5 class="nav-item " style="margin-top: 20px;">Наш контакты</h5>
+                <h6 class="nav-item">Тел:87478707743</h6>
+                <h6 class="nav-item">Почта:shuhrat0531@gmail.com</h6>
+                <!-- <input type="text" class="form-control" placeholder="Full Name">
+                <input type="email" class="form-control" placeholder="Email Address">
+                <textarea class="form-control" placeholder="Message"></textarea> -->
+                
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-6">
+                        <h4>Company</h4>
+                        <ul class="nav flex-column company-nav">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">FAQ's</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                        </ul>
+                       
+                    </div>
+                    <div class="col-6">
+                        <h4>Services</h4>
+                        <ul class="nav flex-column services-nav">
+                            <li class="nav-item"><a class="nav-link" href="#">Web Design</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Graphics Design</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">App Design</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">SEO</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Marketing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Analytic</a></li>
+                        </ul>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static 'js/jquery-3.3.1.slim.min.js'%}"></script>
+<script src="{% static 'js/popper.min.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<script>
+    function openMenu{
+        document.getElementById("sidebar").classList.toggle('active');
+    }
+</script>
+<!-- owl carousel js-->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+<script src="{% static 'owl-carousel/owl.carousel.min.js'%}"></script>
+<script src="{% static 'js/main.js'%}"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+</html>
